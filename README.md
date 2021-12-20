@@ -278,7 +278,7 @@ If you have tried to collaborate by sharing a directory on Dropbox, you know tha
 
 It is the same with Git, although here it is a bit safer than the mess that Dropbox does, since here we synchronise entire directories at a time and we can never end up with a mix of files from two different copies.
 
-
+xxx
 
 
 ## Exercise 1:
