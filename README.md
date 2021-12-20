@@ -270,7 +270,7 @@ If there are changes that the repository at GitHub knows about, but your local r
 There are various reasons why commit/pull is a two step procedure rather than a single command, but they matter little for projects such as those in this class, so there is no need to get into that. Suffices to know is that this is how it is.
 
 
-## Merge conflicts
+## Pulling changes and merge conflicts
 
 So, you can make changes to your repository and then push those changes to GitHub. If you have multiple computers, and you are working on the same project there, you can use this mechanism to synchronise them--a little safer than you can with Dropbox or OneDrive--but we want a little more out of a version control system. We also need to synchronise with collaborators, and in the projects in this class, we need to synchronise within groups.
 
@@ -278,7 +278,81 @@ If you have tried to collaborate by sharing a directory on Dropbox, you know tha
 
 It is the same with Git, although here it is a bit safer than the mess that Dropbox does, since here we synchronise entire directories at a time and we can never end up with a mix of files from two different copies.
 
-xxx
+Your local repository doesn't know if anyone has made changes to the one at GitHub, so if you ask for a `git status`, everything will look fine. It will tell you that "your branch is up to date with 'origin/main'".
+
+```sh
+> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+If you want to know if anything actually changed at `origin/main`, you need to get changes down. There are two options here: you can "fetch" changes or you can "pull" changes. The first just gets information about the `origin/main`, so Git can inform you what your status is.
+
+```sh
+> git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/birc-ctib/intro-to-git-and-github
+   874b90f..cc88e7d  main       -> origin/main
+> git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+```
+
+Here, the status tells us that we are now one commit *behind* `origin/main`, which means that someone has made changes on GitHub.
+
+As the message also tells us, we can use `git pull` to merge those changes into our own repository, after which we will have them as well.
+
+You don't need to do `git fetch` first; you could also go directly to `git pull`. It will fetch the changes and then merge them into our directory. That is usually what I do.
+
+However, what happens if the changes you pull down are in conflict with your own?
+
+Changes made to other files, or changes made to other parts of a text file, can automatically be merged. They are not in conflict with each other, since they do not change the same data. But it does happen that you have made changes to the same bits as someone else, for example made changes the the same function. Then Git doesn't know what to do--it will not make a judgement call on your code--and you have to resolve them.
+
+If you pull, and there are such conflicts, Git will inform you:
+
+```sh
+> git pull
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+Then, it will have put both versions of the conflicting file(s) into the files, and you will need to go and pick which ones you want, or change the two versions into a third.  The conflicts are highlighted with `>>>>>` and `<<<<<` annotations, but your editor should be highlighting them as well, and assist you in resolving the conflict.
+
+While you are in this situation, a `git status` will also remind you:
+
+```sh
+> git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 2 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+If you use a GUI, it will also highlight merge conflicts.
+
+Edit the files with conflict, in this case it is `README.md`, then add it and commit it, and you have merged the two conflicting paths.
+
+
 
 ```sh
 > git push
