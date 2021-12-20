@@ -280,6 +280,16 @@ It is the same with Git, although here it is a bit safer than the mess that Drop
 
 xxx
 
+```sh
+> git push
+To https://github.com/birc-ctib/intro-to-git-and-github.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/birc-ctib/intro-to-git-and-github.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
 
 ## Exercise 1:
 
