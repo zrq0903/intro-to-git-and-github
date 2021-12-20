@@ -251,6 +251,22 @@ nothing to commit, working tree clean
 
 The more you commit, the more you are ahead, so if you did more than one commit (and you should if you did both exercises), then you are more than 1 commit ahead now.
 
+You have commited something to the history of your own local repository, but that does not mean that the repository that sits at GitHub knows about it. It is not nosy, and it will not keep track of all the copies that might be floating around. If you want it to know about it, then you have to tell it, and you do that by "pushing" your changes to it. The `origin/main` that Git is talking about is the repository that sits at GitHub. (Technically, it is a "branch" on that repository, but we don't need to get technical here).
+
+The command for pushing to another repository is `git push`, so try this:
+
+```sh
+> git push
+```
+
+You don't need a commit message here, because you are not committing anything. All the changes that are relevant for this transaction are already known to your own repository, with commit messages, and it is just informing `origin/main`, the repository on GitHub, about them.
+
+If there are changes that the repository at GitHub knows about, but your local repository does not, you can get them down to you with a reverse push, also known in the English language as a pull.
+
+```sh
+> git pull
+```
+
 
 
 
@@ -260,5 +276,3 @@ The more you commit, the more you are ahead, so if you did more than one commit 
 ## Exercise 1:
 
 Write DONE on the last line. (This is currently the last line, so add a line below it; don't for get to add a newline after DONE.)
-
-DONE
