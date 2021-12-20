@@ -146,7 +146,23 @@ For the mandatory projects, once we pass the deadline, I will come swooping in a
 
 The repository you have on your computer now really consists of two separate things: the files that you are currently working on, and the "track changes" log of the history of the repository.
 
-Unlike tools such as Word or Google Docs, Git doesn't automatically incorporate changes into the history. If it did, most of the history of your code would be in an inconsistent state, since the code is unlikely to even compile and run if you are halfway through writing a function. You have to explicitly add changes to the history, and you do that with two commands, `add` and `commit`.
+Unlike tools such as Word or Google Docs, Git doesn't automatically incorporate changes into the history. If it did, most of the history of your code would be in an inconsistent state, since the code is unlikely to even compile and run if you are halfway through writing a function.
+
+Git remember the changes you have commited to its history, and you can get information about which changes you have made since you last commited with `git status`. If you have not changed anything, the result is something like this:
+
+```sh
+> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+But let's say you have made changes to a file, for example this file, then the command will show you that.
+
+
+
+You have to explicitly add changes to the history, and you do that with two commands, `add` and `commit`.
 
 The `add` command tells Git which files you have changed and want it to remember the changes on. Adding a file is called "staging" it, in Git-speak, but it just means that you want the next commit to include this file.
 
