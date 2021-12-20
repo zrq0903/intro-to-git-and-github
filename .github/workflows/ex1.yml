@@ -11,5 +11,5 @@ jobs:
         uses: actions/checkout@v2
 
       - name: "Is the last line README.md DONE?"
-        runs: diff <(tail -1 README.md) <(echo DONE)
+        run: diff <(tail -1 README.md) <(echo DONE)
         shell: bash

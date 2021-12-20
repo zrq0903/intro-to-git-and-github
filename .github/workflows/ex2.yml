@@ -11,5 +11,5 @@ jobs:
         uses: actions/checkout@v2
 
       - name: "Is there a file called hello.txt that contains 'World!'?"
-        runs: [ -e hello.tx ] && diff hello.txt <(echo World!)
+        run: [ -e hello.tx ] && diff hello.txt <(echo World!)
         shell: bash
