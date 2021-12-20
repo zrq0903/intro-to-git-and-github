@@ -267,10 +267,18 @@ If there are changes that the repository at GitHub knows about, but your local r
 > git pull
 ```
 
-
+There are various reasons why commit/pull is a two step procedure rather than a single command, but they matter little for projects such as those in this class, so there is no need to get into that. Suffices to know is that this is how it is.
 
 
 ## Merge conflicts
+
+So, you can make changes to your repository and then push those changes to GitHub. If you have multiple computers, and you are working on the same project there, you can use this mechanism to synchronise them--a little safer than you can with Dropbox or OneDrive--but we want a little more out of a version control system. We also need to synchronise with collaborators, and in the projects in this class, we need to synchronise within groups.
+
+If you have tried to collaborate by sharing a directory on Dropbox, you know that if several people add files to the same drive concurrently, there can be conflicts. If both Alice and Bob write to the file Caroline.txt at the same time, Dropbox can't consider both versions the "correct" one, and you have to resolve the conflict; you have to determine which if any of them is correct, or you need to merge the changes that Alice and Bob have made.
+
+It is the same with Git, although here it is a bit safer than the mess that Dropbox does, since here we synchronise entire directories at a time and we can never end up with a mix of files from two different copies.
+
+
 
 
 ## Exercise 1:
