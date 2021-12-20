@@ -217,7 +217,7 @@ Your branch is ahead of 'origin/main' by 1 commit.
 nothing to commit, working tree clean
 ```
 
-No there are no changes to commit, staged or otherwise, but the command says that our branch is ahead of `origin/main`. This is because we have only told our own "track changes" about what we have been up to. The repository that sits in the cloud hasn't been informed about them yet.
+No there are no changes to commit, staged or otherwise, but the command says that our branch is ahead of `origin/main`. This is because we have only told our own "track changes" about what we have been up to. The repository that sits in the cloud hasn't been informed about them yet. We will get to that in the next section.
 
 The two-stage `add` + `commit` is necessary when you create new files, but if all the files you want to commit are already known to Git, and you want to commit all changes, you can combine the two commands using the option `-a`. If you write
 
@@ -227,10 +227,32 @@ The two-stage `add` + `commit` is necessary when you create new files, but if al
 
 the `-a` tells Git to just add all the modified files before committing.
 
-However, it is only the files it knows about that it will add. Try adding a file to this repository, call it `hello.txt` and put `World!` in it. Then try committing with `-a -m` and see what happens. 
+However, it is only the files it knows about that it will add. Try adding a file to this repository, call it `hello.txt` and put `World!` in it. Then try committing with `-a -m` and see what happens. Then try adding `hello.txt`
+
+```sh
+> git add hello.txt
+```
+
+and try to commit once more.
 
 
 ## Pushing changes to GitHub and pulling changes back
+
+Now, what is it about that `ahead of 'origin/main'` in the `git status` message?
+
+```sh
+> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+```
+
+The more you commit, the more you are ahead, so if you did more than one commit (and you should if you did both exercises), then you are more than 1 commit ahead now.
+
+
+
 
 ## Merge conflicts
 
@@ -238,3 +260,5 @@ However, it is only the files it knows about that it will add. Try adding a file
 ## Exercise 1:
 
 Write DONE on the last line. (This is currently the last line, so add a line below it; don't for get to add a newline after DONE.)
+
+DONE

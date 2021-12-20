@@ -1,0 +1,15 @@
+name: Exercise 1
+
+on: [push]
+
+jobs:
+  make-testing:
+    name: Checking exercise 1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out repository
+        uses: actions/checkout@v2
+
+      - name: "Is the last line README.md DONE?"
+        runs: diff <(tail -1 README.md) <(echo DONE)
+        shell: bash
