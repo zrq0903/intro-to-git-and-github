@@ -160,13 +160,74 @@ nothing to commit, working tree clean
 
 But let's say you have made changes to a file, for example this file, then the command will show you that.
 
+```sh
+> git status
+On branch main
+Your branch is up to date with 'origin/main'.
 
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+It tells us that our branch is up to date with `origin/main` (which doesn't mean anything to us yet, but see below), and that there are files that are modified but not staged for commit.
+
+Try to go to the end of this file and write `DONE` on the last line. Then run the command and see what it says.
+
+If you are using your editor or GitHub Desktop to interact with Git, then you can see similar information in a GUI. For a beginner, this might be more convinient, but I will continue the description using the command line. You can follow along using your GUI tool instead; it will have the same commands.
 
 You have to explicitly add changes to the history, and you do that with two commands, `add` and `commit`.
 
 The `add` command tells Git which files you have changed and want it to remember the changes on. Adding a file is called "staging" it, in Git-speak, but it just means that you want the next commit to include this file.
 
+Let's add `README.md` so it will be staged for a commit.
 
+```sh
+> git add README.md
+> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+```
+
+Now `README.md` is moved from changes not staged for commit to changes that will be committed. It is still not commited, though, it is just staged. You can stage multiple files as you work on them, and wait with committing them to history until later.
+
+When you are ready to commit, use
+
+```sh
+> git commit -m "I wrote DONE at the end of README.md"
+```
+
+The `-m` option is a message that we associate to the changes we commit. You can leave out the `-m` option, then `git` will open an editor to get the commit message, but you cannot leave out a message.
+
+Now run `git status` again
+
+```sh
+> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+```
+
+No there are no changes to commit, staged or otherwise, but the command says that our branch is ahead of `origin/main`. This is because we have only told our own "track changes" about what we have been up to. The repository that sits in the cloud hasn't been informed about them yet.
+
+The two-stage `add` + `commit` is necessary when you create new files, but if all the files you want to commit are already known to Git, and you want to commit all changes, you can combine the two commands using the option `-a`. If you write
+
+```sh
+> git commit -a -m "commit message"
+```
+
+the `-a` tells Git to just add all the modified files before committing.
+
+However, it is only the files it knows about that it will add. Try adding a file to this repository, call it `hello.txt` and put `World!` in it. Then try committing with `-a -m` and see what happens. 
 
 
 ## Pushing changes to GitHub and pulling changes back
