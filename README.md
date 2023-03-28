@@ -1,11 +1,3 @@
-# Week 1 — Read-mapping and file formats
-
-## Lecture
-
-- Topics: Introduction to this class, to GitHub, and to the UNIX command line.
-- Slides: [Introduction to CTiB](../slides/Week%2001%20-%20Introduction%20to%20CTiB.pdf)
-- Reading material: ICT (Introduction to Computational Thinking) Chapter 1.
-
 ## Exercises
 
 ### Introduction to Git and GitHub
