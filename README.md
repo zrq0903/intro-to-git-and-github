@@ -49,46 +49,6 @@ Continue this exercise on the repository you just created. There is more to cove
 When you are familiar with Git and GitHub, you [should also familiarise yourself with the UNIX command line][command-line-ex].
 
 
-[command-line-ex]: https://classroom.github.com/a/1PL6fkvZ
-[intro-to-github-ex]: https://classroom.github.com/a/thiv-vBR
-
-[w02-prog-ex]: https://classroom.github.com/a/eHT3v0vO
-[w02-commandline-ex]: https://classroom.github.com/a/RZ5qj9EM
-
-[w03-merge-ex]: https://classroom.github.com/a/UmJIjYga
-[w03-guessing-ex]: https://classroom.github.com/a/w2zYG9rs
-[w03-base-ex]: https://classroom.github.com/a/WhkMKxiG
-[w03-sieve-ex]: https://classroom.github.com/a/nOlUcLpC
-[w03-substring-ex]: https://classroom.github.com/a/g5izmEF6
-[w03-powerset-ex]: https://classroom.github.com/a/fFQ8bnRW
-[w03-subseq-ex]: https://classroom.github.com/a/o_x993_l
-
-[w05-bucket-ex]: https://classroom.github.com/a/FRyhSo9Z
-
-[w06-simple-funcs-ex]: https://classroom.github.com/a/HSJme2Sc
-[w06-kmers-ex]: https://classroom.github.com/a/SCdCrWls
-[w06-reduce-ex]: https://classroom.github.com/a/S3nNXf4P
-
-[w07-lists-ex]: https://classroom.github.com/a/h7IbTip7
-
-[w09-mm-ex]: https://classroom.github.com/a/xeQimhib
-
-[w11-sllists-ex]: https://classroom.github.com/a/_pQk3Ubu
-[w11-dllists-ex]: https://classroom.github.com/a/7pl86e-u
-
-[w12-list-set-ex]: https://classroom.github.com/a/XkIwH_-C
-[w12-search-tree-set-ex]: https://classroom.github.com/a/k7PcLVzX
-[w12-hash-table-ex]: https://classroom.github.com/a/fyiPM3Q1
-
-[w13-linked-list-stack-ex]: https://classroom.github.com/a/ilT9Ac44
-[w13-newick-ex]: https://classroom.github.com/a/YAEwZvKz
-[w13-dllist-queue-ex]: https://classroom.github.com/a/C8WQ7Izm
-
-[w14-huffmann-ex]: https://classroom.github.com/a/M8XtDVVs
-[w14-prim-ex]: https://classroom.github.com/a/Sx68X7e-
-[w14-search-tree-pqueue-ex]: https://classroom.github.com/a/9_jZrklZ
-[w14-leftist-heap-ex]: https://classroom.github.com/a/k-N11ODB
-[w14-binary-heap-ex]: https://classroom.github.com/a/sjuKt9Lb
-[w14-heap-sort-ex]: https://classroom.github.com/a/OpTr0gTe
+[command-line-ex]: https://github.com/birc-ctib/command-lines-and-pipes
 
 
