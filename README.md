@@ -26,11 +26,9 @@ To use GitHub, you need an account there. It is free; you just need to sign up, 
 
 We need to get a repository to work with for the next step. In this class each assignment has a matching repository that you can use as template for completing the assignment.
 
-The one available for this exercise is this: [Introduction to Git and GitHub][https://github.com/birc-ctib/intro-to-git-and-github]. Click it, and then read on for further instructions.
+The one available for this exercise is this: [Introduction to Git and GitHub](https://github.com/birc-ctib/intro-to-git-and-github). Click it, and then read on for further instructions.
 
-If you are on GitHub, following the link you got, there is the name of the repositiory at the top, below that there is a tool-bar (Code, Issues, Pull requests, Actions, ...), and below that four buttons. The only button that is interesting for us is the blue "Use this template" one.
-
-Click on that.
+If you are on GitHub, following the link you got, there is the name of the repositiory at the top, below that there is a tool-bar (Code, Issues, Pull requests, Actions, ...), and below that four buttons. Clicking on the blue "Use this template" button is one way of creating your own repository from the template.
 
 ![](img/get_repository.png)
 
