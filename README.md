@@ -24,7 +24,7 @@ If you are on GitHub, following the link you got, there is the name of the repos
 
 ![](img/get_repository.png)
 
-There are three ways you can download the repository: you can "clone" it, open it with GitHub Desktop, or download a zip file. The last option is of no use to us because we will only get a copy of the code, and we want a repository we can work with. We can choose the first option if the command-line git tools are installed. Then you copy the URL, and in your terminal, you write
+There are three ways you can download the repository: you can "clone" it, open it with GitHub Desktop, or download a zip file. The last option is the simplest because you will only get a copy of the code, but if you want a repository you can work with, you need to use one of the other two options. We can choose the first option if the command-line git tools are installed. Then you copy the URL, and in your terminal, you write
 
 ```bash
 > git clone https://github.com/[REPO-NAME]
